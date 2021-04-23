@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">InShortsMovie</string>
+    <string name="loading_text">Please wait. Loading…</string>
+    <string name="trending_title">Trending</string>
+    <string name="now_playing_title">Now Playing</string>
+    <string name="search">Search</string>
+    <string name="bookmark_title">Favourites</string>
+    <string name="no_bookmarks_found">No favourites found. Try saving some and then come back.</string>
+    <string name="add_to_favourites">Add to favourites</string>
+    <string name="share">Share</string>
+    <string name="description">Description</string>
+    <string name="information">Information</string>
+    <string name="revenue">Revenue: $%s</string>
+    <string name="budget">Budget: $%s</string>
+    <string name="status">Status: %s</string>
+    <string name="runtime">Runtime: %s</string>
+    <string name="something_went_wrong_n_no_details_found">Something went wrong. \n No Details found</string>
+    <string name="OK">ok</string>
+    <string name="ok">OK</string>
+    <string name="no_movies_found">No movies found for your search!!</string>
+    <string name="favourite">Favourite</string>
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimen_2dp"
+    android:background="@drawable/bg_round_corner"
+    android:layout_margin="@dimen/dimen_4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_movie_icon"
+        android:layout_width="@dimen/dimen_100dp"
+        android:layout_height="@dimen/dimen_100dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_movie_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/iv_movie_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        tools:text="Suicide Squad"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_16sp"
+        android:textColor="@color/color_333333"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"/>
+
+    <TextView
+        android:id="@+id/tv_release_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_name"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_name"
+        tools:text="2016-08-03"
+        android:textStyle="normal"
+        android:textSize="@dimen/dimen_14sp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_popularity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_release_date"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_name"
+        tools:text="9.34"
+        app:drawableStartCompat="@drawable/ic_star_20"
+        android:textStyle="bold"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/dimen_16sp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

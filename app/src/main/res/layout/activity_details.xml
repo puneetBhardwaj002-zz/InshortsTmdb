@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_movie_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/bg_placeholder_background" />
+
+        <ImageView
+            android:id="@+id/iv_movie_poster"
+            android:layout_width="@dimen/dimen_150dp"
+            android:layout_height="@dimen/dimen_200dp"
+            android:background="@drawable/bg_round_corner"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/iv_movie_backdrop"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@drawable/bg_placeholder_background" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_movie_poster"
+            app:layout_constraintTop_toTopOf="@id/iv_movie_poster"
+            tools:text="Godzilla vs Kong" />
+
+        <TextView
+            android:id="@+id/tv_movie_details_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:background="@drawable/bg_details_grey"
+            android:padding="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/iv_movie_poster"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/tv_movie_detail_genre"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_title"
+            tools:text="2018" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:background="@drawable/bg_details_grey"
+            android:padding="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_details_year"
+            app:layout_constraintEnd_toStartOf="@id/tv_movie_detail_rating"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintTop_toTopOf="@id/tv_movie_details_year"
+            tools:text="Adventure" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:background="@drawable/bg_details_grey"
+            android:padding="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_16sp"
+            app:drawableStartCompat="@drawable/ic_star_20"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_detail_genre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintTop_toTopOf="@id/tv_movie_details_year"
+            tools:text="8.7" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:background="@drawable/bg_details_grey"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dimen_8dp"
+            android:text="@string/share"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_movie_detail_bookmark"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_movie_backdrop" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_bookmark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:background="@drawable/bg_details_grey"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/dimen_8dp"
+            android:text="@string/add_to_favourites"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_movie_detail_share"
+            app:layout_constraintTop_toTopOf="@id/tv_movie_detail_share" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_description_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/description"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_share" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_description_title"
+            tools:text="In a time when monsters walk the Earth, humanity’s fight for its future sets Godzilla and Kong on a collision course that will see the two most powerful forces of nature on the planet collide in a spectacular battle for the ages." />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:text="@string/information"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_description_text" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/bg_circle_dot"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_information"
+            tools:text="Status: Released" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_revenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/bg_circle_dot"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_status"
+            tools:text="Revenue: $10,000,000" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_budget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/bg_circle_dot"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_revenue"
+            tools:text="Budget: $10,000,000" />
+
+        <TextView
+            android:id="@+id/tv_movie_detail_runtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:textColor="@color/color_ffffff"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/bg_circle_dot"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_detail_budget"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/dimen_16dp"
+            tools:text="Runtime: 1 hour 29 minutes" />
+
+        <ProgressBar
+            android:id="@+id/pb_movie_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
